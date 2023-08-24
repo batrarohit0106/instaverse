@@ -11,11 +11,7 @@ dotenv.config();
 
 app.use(bodyParser.json({ limit: "32mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "32mb", extended: true }));
-app.use(cors({
-    origin:[],
-    methods:["POST","GET"],
-    credentials: true
-}));
+app.use(cors());
 
 app.use("/stories", storyRoutes);
 app.use("/user", userRoutes);
